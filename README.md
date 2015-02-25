@@ -13,6 +13,4 @@ Setup
 
 Other useful commands:
 * gradle test
-* gradle test jacocoTestReport (coverage report)
-
-
+* gradle test jacocoTestReport (coverage results in ./build/reports/jacoco/test/html/index.html)

@@ -61,19 +61,19 @@ public class TestMain {
 
     @Test
     public void pronounceBase() throws Exception {
-        assertEquals("", main.pronounceBase(""));
-        assertEquals("", main.pronounceBase("0"));
-        assertEquals("", main.pronounceBase("00"));
-        assertEquals("", main.pronounceBase("000"));
-        assertEquals("one", main.pronounceBase("1"));
-        assertEquals("one", main.pronounceBase("01"));
-        assertEquals("one", main.pronounceBase("001"));
-        assertEquals("ten", main.pronounceBase("10"));
-        assertEquals("twenty", main.pronounceBase("20"));
-        assertEquals("eleven", main.pronounceBase("11"));
-        assertEquals("twenty-two", main.pronounceBase("22"));
-        assertEquals("one hundred twenty-three", main.pronounceBase("123"));
-        assertEquals("one hundred one", main.pronounceBase("101"));
+        assertEquals("", main.pronounceCluster(""));
+        assertEquals("", main.pronounceCluster("0"));
+        assertEquals("", main.pronounceCluster("00"));
+        assertEquals("", main.pronounceCluster("000"));
+        assertEquals("one", main.pronounceCluster("1"));
+        assertEquals("one", main.pronounceCluster("01"));
+        assertEquals("one", main.pronounceCluster("001"));
+        assertEquals("ten", main.pronounceCluster("10"));
+        assertEquals("twenty", main.pronounceCluster("20"));
+        assertEquals("eleven", main.pronounceCluster("11"));
+        assertEquals("twenty-two", main.pronounceCluster("22"));
+        assertEquals("one hundred twenty-three", main.pronounceCluster("123"));
+        assertEquals("one hundred one", main.pronounceCluster("101"));
     }
 
     @Test

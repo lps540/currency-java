@@ -67,34 +67,34 @@ public class Main {
         int size = list.size();
 
         if (size == 1) {
-            return pronounceBase(list.get(0));
+            return pronounceCluster(list.get(0));
         } else if (list.get(0).equals("000")) {
-            return pronounceBase(list.get(0)) + pronounce1(list.subList(1, size));
+            return pronounceCluster(list.get(0)) + pronounce1(list.subList(1, size));
         } else {
-            return pronounceBase(list.get(0)) +  " " + clusterMap.get(size) + " " + pronounce1(list.subList(1, size));
+            return pronounceCluster(list.get(0)) +  " " + clusterMap.get(size) + " " + pronounce1(list.subList(1, size));
         }
     }
 
     /*
      * Pronounce a three-digit cluster
      */
-    String pronounceBase(String s) {
+    String pronounceCluster(String s) {
         switch (s.length()) {
             case 3:
                 if (s.substring(0, 1).equals("0")) {
-                    return pronounceBase(s.substring(1));
+                    return pronounceCluster(s.substring(1));
                 } else {
-                    return onesMap.get(s.substring(0, 1)) + " hundred " + pronounceBase(s.substring(1));
+                    return onesMap.get(s.substring(0, 1)) + " hundred " + pronounceCluster(s.substring(1));
                 }
             case 2:
                 if (s.substring(0, 1).equals("0")) {
-                    return pronounceBase(s.substring(1));
+                    return pronounceCluster(s.substring(1));
                 } else if (s.substring(0, 1).equals("1")) {
                     return teensMap.get(s.substring(1, 2));
                 } else if (s.substring(1).trim().equals("0")) {
-                    return tensMap.get(s.substring(0, 1)) + pronounceBase(s.substring(1));
+                    return tensMap.get(s.substring(0, 1)) + pronounceCluster(s.substring(1));
                 } else {
-                    return tensMap.get(s.substring(0, 1)) + "-" + pronounceBase(s.substring(1));
+                    return tensMap.get(s.substring(0, 1)) + "-" + pronounceCluster(s.substring(1));
                 }
 
             case 1:
